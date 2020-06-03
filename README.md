@@ -1,3 +1,2 @@
-# Simple-React-Web-Template
+React Web For AI Club
 
-_React-web-template made by React_
