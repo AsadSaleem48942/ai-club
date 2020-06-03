@@ -1,0 +1,104 @@
+.pimg1,
+.pimg2 {
+  position: relative;
+  height: 100%;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.pimg1 {
+  background-image: url("../../../../src/imgs/AI2.jpg");
+  min-height: 100vh;
+}
+
+.pimg2 {
+  background-image: url("../../../imgs/AI.jpeg");
+  min-height: 400px;
+}
+
+.section {
+  text-align: center;
+  padding: 50px 80px;
+  height: 60%;
+}
+
+.section p {
+  font-size: 1.5em;
+}
+
+.About-mainHead {
+  font-size: 2.7rem;
+}
+
+.section-light {
+  background-color: #f4f4f4;
+  color: #666;
+}
+
+.section-dark {
+  background-color: #282e34;
+  color: #ddd;
+}
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: black !important;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.ptext .border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+}
+
+.ptext .border.trans {
+  background-color: transparent;
+}
+
+section img {
+  width: 300px;
+}
+
+/* .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+/* .column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+} */
+
+/* .column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+} */
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+/* @media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+} */
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+} */

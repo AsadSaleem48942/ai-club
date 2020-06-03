@@ -1,0 +1,11 @@
+.nav-link {
+  color: white;
+}
+
+.navbar {
+  position: fixed !important;
+  background-color: rgb(5, 16, 147, 0.8);
+  width: 100%;
+  z-index: 2 !important;
+  padding: 0 !important;
+}
