@@ -24,7 +24,7 @@ class Header extends React.Component {
       },
       {
         title: "Blogs",
-        path: "/",
+        path: "/blogs",
       },
       {
         title: "Team",
