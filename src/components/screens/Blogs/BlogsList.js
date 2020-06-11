@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import BlogItem from "./BlogItem";
+import './Blog.css'
 var contentful = require("contentful");
 
 function BlogsList() {
@@ -23,14 +24,17 @@ function BlogsList() {
   console.log("blogs", blogs);
 
   return (
-    <div>
-      <h1>Blogs List</h1>
+    <Fragment>
+      <div className="blog-list">
+        <h1>Blogs List</h1>
       {blogs !== undefined ? (
-        blogs.map((blog, i) => <BlogItem id={i} key={i} blog={blog} />)
+        blogs.map(({fields}, i) => <BlogItem id={i} key={i} {...fields} />)
       ) : (
         <div></div>
       )}
-    </div>
+      </div>
+      
+    </Fragment>
   );
 }
 
