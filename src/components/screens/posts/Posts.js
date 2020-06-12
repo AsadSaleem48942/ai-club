@@ -14,7 +14,7 @@ export default function Posts() {
       <Link
         className="posts__post"
         key={post.fields.id}
-        to={`/blogs/${post.fields.id}`}
+        to={`blogs/?id=${post.fields.id}`}
       >
         <h3>{post.fields.title}</h3>
       </Link>

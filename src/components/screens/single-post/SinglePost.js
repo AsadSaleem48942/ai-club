@@ -2,10 +2,12 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { useSinglePost } from "../../../custom-hooks/";
+import withLocation from "../../withLocation";
 import "./SinglePost.css";
 
-export default function SinglePost() {
-  const { id } = useParams();
+const SinglePost = ({ search }) => {
+  const { id } = search;
+  //const { id } = useParams();
   const [post, isLoading] = useSinglePost(id);
   console.log('id',id);
 
@@ -35,3 +37,5 @@ export default function SinglePost() {
     </div>
   );
 }
+
+export default withLocation(SinglePost)
