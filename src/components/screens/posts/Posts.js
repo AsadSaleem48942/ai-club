@@ -10,12 +10,23 @@ export default function Posts() {
   const renderPosts = () => {
     if (isLoading) return <p>Loading...</p>;
 
+    posts.map((post) => {
+      console.log("img", post.fields.id);
+    });
+
     return posts.map((post) => (
       <Link
         className="posts__post"
         key={post.fields.id}
         to={`blogs/?id=${post.fields.id}`}
       >
+        <div className="posts__post__img__container">
+          <img
+            className="posts__post__img__container__img"
+            src={`${post.fields.image[0].fields.file.url}`}
+            alt={post.fields.title}
+          />
+        </div>
         <h3>{post.fields.title}</h3>
       </Link>
     ));
@@ -23,8 +34,7 @@ export default function Posts() {
 
   return (
     <div className="posts__container">
-      <h2>Blogs</h2>
-
+      <h2 className="heading">Blogs</h2>
       <div className="posts">{renderPosts()}</div>
     </div>
   );

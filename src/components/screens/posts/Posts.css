@@ -1,5 +1,10 @@
 .posts__container {
-  padding: 10rem 3em;
+  padding: 8rem 3em;
+}
+
+.heading{
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .posts {
