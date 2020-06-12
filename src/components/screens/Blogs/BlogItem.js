@@ -5,6 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 function BlogItem(props) {
   const { blog } = props;
   const document = blog.fields.content;
+  
 
   return (
     <div>

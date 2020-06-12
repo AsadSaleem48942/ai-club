@@ -18,7 +18,7 @@ export default function Posts() {
       <Link
         className="posts__post"
         key={post.fields.id}
-        to={`blogs/?id=${post.fields.id}`}
+        to={`blogs/${post.fields.id}`}
       >
         <div className="posts__post__img__container">
           <img

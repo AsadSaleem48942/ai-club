@@ -1,3 +1,7 @@
+.posts__container {
+  padding: 5rem 3em;
+}
+
 .post__back {
   display: block;
   width: 100%;
@@ -22,7 +26,7 @@
 
 .post__intro,
 .post__body {
-  padding: 1rem 5rem;
+  padding: 1rem 0rem;
 }
 
 .post__intro {
