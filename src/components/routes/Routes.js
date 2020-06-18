@@ -1,33 +1,40 @@
 import React, { Component } from "react";
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { Router, Switch, Route } from "react-router-dom";
+import { useParams } from "react-router";
 import Home from "../screens/Home/Home";
 import About from "../screens/About/About";
 import Contact from "../screens/Contact/Contact";
+import Posts from "../screens/posts/Posts";
+import SinglePost from "../screens/single-post/SinglePost";
 import Header from "../Header/Header";
 import WithLoader from "../WithLoader/WithLoader";
-import EventPage from "../screens/event/EventPage";
+import { createBrowserHistory } from "history";
 
-class Router extends Component {
+class Routes extends Component {
   render() {
     const HomeWithLoader = WithLoader(Home),
       AboutWithLoader = WithLoader(About),
       ContactWithLoader = WithLoader(Contact),
-      EventWithLoader = WithLoader(EventPage);
+      PostsWithLoader = WithLoader(Posts),
+      SinglePostWithLoader = WithLoader(SinglePost)
+    
+    const history = createBrowserHistory();
 
     return (
       <div>
-        <HashRouter>
+        <Router history={history}>
           <Header />
           <Switch>
             <Route exact path="/" component={HomeWithLoader} />
             <Route path="/about" component={AboutWithLoader} />
             <Route path="/contact" component={ContactWithLoader} />
-            <Route path="/events" component={EventWithLoader} />
+            <Route exact path="/blogs" component={PostsWithLoader} />
+            <Route path="/blogs/:id" component={SinglePost} />
           </Switch>
-        </HashRouter>
+        </Router>
       </div>
     );
   }
 }
 
-export default Router;
+export default Routes;
