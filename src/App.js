@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 // import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 // import Body from "./components/Body/Body";
-import Router from "./components/routes/Router";
+import Routes from "./components/routes/Routes";
 import "./App.css";
 
 class App extends Component {
@@ -21,7 +21,7 @@ class App extends Component {
       <Fragment>
         {/* <Header changeState={this.changeState} /> */}
         {/* <Body st={this.state.pageVisited} /> */}
-        <Router />
+        <Routes/>
         <div style={{ position: "relative" }}>
           <Footer />
         </div>

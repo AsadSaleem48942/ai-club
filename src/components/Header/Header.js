@@ -20,11 +20,11 @@ class Header extends React.Component {
       },
       {
         title: "Events",
-        path: "/",
+        path: "/events",
       },
       {
         title: "Blogs",
-        path: "/",
+        path: "/blogs",
       },
       {
         title: "Team",
